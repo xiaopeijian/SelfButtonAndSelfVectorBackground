@@ -1,0 +1,19 @@
+﻿<Window x:Class="自定义按钮_自定义图标.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:自定义按钮_自定义图标"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="725">
+    <StackPanel>
+        <local:ImageButton Width="120" Height="130" Text="Open Folder" Content="{DynamicResource Icon.Open}" x:Name="btn1" Click="ImageButton_Click"/>
+        <local:ImageButton Width="120" Height="140" Text="Save File" Content="{DynamicResource Icon.Save}" x:Name="btn2" Click="ImageButton_Click" />
+        <Button Content="主题1(单击切换)" Click="Button_Click_1"/>
+        <Button Content="主题2(单击切换)" Click="Button_Click"/>
+        <WrapPanel>
+            <Label>更改图标大小</Label>
+            <Slider Minimum="120" Maximum="300" TickFrequency="10" ValueChanged="Slider_ValueChanged" Name="slider1" Width="100"/>
+        </WrapPanel>
+    </StackPanel>
+</Window>
